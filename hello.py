@@ -1,4 +1,4 @@
-import os
+from datetime import datetime
 from flask import Flask
 from flask import Response
 
@@ -11,7 +11,6 @@ def root():
 
 @app.route('/env')
 def env():
-    html = "System Environment:\n\n"
-    for env in os.environ.keys():
-      html += env + ': ' + os.environ[env] + "\n"
+    html = "<h1>System Time:<h1>"
+    html += '<h3>' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '</h3>'
     return Response(html, mimetype='text/plain')
