@@ -11,6 +11,6 @@ def root():
 
 @app.route('/env')
 def env():
-    html = "<h1>System Time:<h1>"
-    html += '<h3>' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '</h3>'
+    html = "System Time: \n\n"
+    html += datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     return Response(html, mimetype='text/plain')
