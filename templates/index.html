@@ -1,110 +1,102 @@
-<html>
- <head>
-   <title>Goodrain Python Demo</title>
-   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-   <style type="text/css">
-     body {
-       font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei","Hiragino Sans GB",Verdana, Geneva, sans-serif;
-     }
+<!DOCTYPE html>
+<html lang="en-us">
 
-     .wrapper {
-       width: 900px;
-       margin: 0 auto;
-     }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Rainbond Python Demo </title>
 
-     p {
-       margin-top: 20px;
-     }
+  <meta name="description" content="Rainbond（云帮）是一款以应用为中心的开源PaaS，深度整合基于Kubernetes的容器管理、Service Mesh微服务架构最佳实践、多类型CI/CD应用构建与交付、多数据中心资源管理等技术，为用户提供云原生应用全生命周期解决方案，构建应用与基础设施、应用与应用、基础设施与基础设施之间互联互通的生态体系，满足支撑业务高速发展所需的敏捷开发、高效运维和精益管理需求。">
 
-     a:link {
-       text-decoration: none;
-       color: #2d59a2;
-     }
+  <meta name="author" content="goodrain">
 
-     a:visited {
-       text-decoration: none;
-       color: #2d59a2;
-     }
 
-     a:hover {
-       text-decoration: none;
-       color: #203f71;
-     }
+  <meta property="og:title" content="Rainbond Python Demo" />
+<meta property="og:description" content="Rainbond（云帮）是一款以应用为中心的开源PaaS，深度整合基于Kubernetes的容器管理、Service Mesh微服务架构最佳实践、多类型CI/CD应用构建与交付、多数据中心资源管理等技术，为用户提供云原生应用全生命周期解决方案，构建应用与基础设施、应用与应用、基础设施与基础设施之间互联互通的生态体系，满足支撑业务高速发展所需的敏捷开发、高效运维和精益管理需求。" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/" />
+<meta property="og:updated_time" content="2017-03-02T21:56:55&#43;01:00"/>
+  <link rel="canonical" href="/">
 
-     a:active {
-       text-decoration: none;
-       color: #203f71;
-     }
+  <link href="{{ request.script_root }}/static/css/font.css" rel="stylesheet" type="text/css">
+  <link href="{{ request.script_root }}/static/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="{{ request.script_root }}/static/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="{{ request.script_root }}/static/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="{{ request.script_root }}/static/css/master.css" rel="stylesheet" type="text/css">
+  <link href="{{ request.script_root }}/static/css/kube.demo.css" rel="stylesheet" type="text/css">
 
-     #forkongithub a {
-       background: #000;
-       color: #fff;
-       text-decoration: none;
-       font-family: arial,sans-serif;
-       text-align: center;
-       font-weight: bold;
-       padding: 5px 40px;
-       font-size: 1rem;
-       line-height: 2rem;
-       position: relative;
-       transition: 0.5s;
-     }
+ <link href="{{ request.script_root }}/static/css/custom.css" rel="stylesheet" type="text/css">
 
-     #forkongithub a:hover {
-       background: #c11;
-       color: #fff;
-     }
+  <script src="{{ request.script_root }}/static/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
 
-     #forkongithub a::before,#forkongithub a::after {
-       content: "";
-       width: 100%;
-       display: block;
-       position: absolute;
-       top: 1px;
-       left: 0;
-       height: 1px;
-       background: #fff;
-     }
+  <script type="text/javascript" src="{{ request.script_root }}/static/js/tocbot.min.js"></script>
+</head>
 
-     #forkongithub a::after {
-       bottom: 1px;
-       top: auto;
-     }
 
-     @media screen and (min-width:800px) {
-       #forkongithub {
-         position: absolute;
-         display: block;
-         top: 0;
-         right: 0;
-         width: 200px;
-         overflow: hidden;
-         height: 200px;
-         z-index: 9999;
-       }
-
-       #forkongithub a {
-         width: 200px;
-         position: absolute;
-         top: 60px;
-         right: -60px;
-         transform: rotate(45deg);
-         -webkit-transform: rotate(45deg);
-         -ms-transform: rotate(45deg);
-         -moz-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-         box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
-       }
-     }
-   </style>
- </head>
- <body>
-  <div class="wrapper">
-   <p>这是 <a href="http://goodrain.com" target="_blank">好雨</a> 云平台 <a href="http://code.goodrain.com/demo/python-hello/tree/master" target="_blank">Python</a> 代码示例运行效果页面。</p>
-   <p>
-     本页面是一个静态页面，动态页面示例：<a href="/env" style="color: green; text-decoration: underline;">输出系统时间</a>
-   </p>
-
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">Rainbond</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
   </div>
- </body>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">Rainbond</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+
+
+    <li><a href="https://github.com/goodrain/rainbond" target="_blank" >Github</a></li>
+
+    <li><a href="https://www.rainbond.com/docs/stable/user-manual/language-support/python.html" target="_blank">Docs</a></li>
+
+          <li><a href="/env" target="_blank">示例</a></li>
+
+
+      </ul>
+    </nav>
+    <nav id="top-nav-extra">
+      <ul>
+        <li>
+          <a href="https://console.goodrain.com" target="_blank">试用公有云</a>
+        </li>
+      </ul>
+    </nav>
+  </div> </header>
+  <main>
+
+<div id="main">
+  <div id="hero">
+    <h1>Python Demo for Rainbond</h1>
+    <p></p>
+  </div>
+  <div id="action-buttons">
+    <a class="button primary big" href="https://www.rainbond.com/docs/stable/getting-started/before-installation.html" target="_blank">私有化部署</a> <a class="button outline big" href="https://github.com/goodrain/python-demo" target="_blank">View on Github</a>
+    <p>Version 3.4.0 Since  Dec 12, 2017.<br>
+        你值得拥有哟。
+    </p>
+  </div>
+  <div class="message focus" data-component="message"> <span class="close small"></span>
+  <a class="button inverted small" href="https://www.rainbond.com" target="_blank">Rainbond  </a>是一款以应用为中心的开源PaaS，深度整合基于<mark>Kubernetes</mark>的容器管理、<mark>Service Mesh</mark>微服务架构最佳实践、多类型CI/CD应用构建与交付、多数据中心资源管理等技术，为用户提供云原生应用全生命周期解决方案，构建应用与基础设施、应用与应用、基础设施与基础设施之间互联互通的生态体系，满足支撑业务高速发展所需的敏捷开发、高效运维和精益管理需求。
+  </div>
+
+</div>
+</main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>Rainbond</span></li>
+      </ul>
+    </nav>
+    <p>&copy; Licence Apache.</p>
+  </footer> </footer>
+  <script src="{{ request.script_root }}/static/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script src="{{ request.script_root }}/static/js/kube.js" type="text/javascript"></script>
+  <script src="{{ request.script_root }}/static/js/master.js" type="text/javascript"></script>
+</body>
 </html>
