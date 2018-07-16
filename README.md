@@ -6,26 +6,32 @@
 
 ```
 .
+├── LICENSE
 ├── Procfile
 ├── README.md
-├── hello.py
+├── app.py
+├── requirements.txt
 ├── runtime.txt
-└── requirements.txt
+├── static
+│   ├── css
+│   ├── font
+│   └── js
+└── templates
+    └── index.html
+
 ```
 
 ## 项目要求
 
-项目必须使用 [Pip](https://pip.pypa.io) 来解决依赖，如果项目目录下没有 `requirements.txt` 文件，你必须创建一个，否则项目将无法部署。
+项目必须使用 [pip](https://pip.pypa.io) 来解决依赖，如果项目目录下没有 `requirements.txt` 文件，你必须创建一个，否则项目将无法部署。
 
 > 小提示：可以使用 `pip freeze > requirements.txt` 命令生成 `requirements.txt` 文件
 
 `requirements.txt` 示例：
 
 ```
-Flask==0.9
-Jinja2==2.7.2
-Werkzeug==0.8.3
-gunicorn==19.0.0
+Flask==1.0.2
+gunicorn==19.9.0
 ```
 
 要想应用可以跑起来，还需要一个 `Procfile` 文件，里面指定应用的启动命令。
@@ -33,7 +39,7 @@ gunicorn==19.0.0
 `Procfile` 示例：
 
 ```
-web: gunicorn hello:app --log-file - --access-logfile - --error-logfile -
+web: gunicorn app:app --log-file - --access-logfile - --error-logfile -
 ```
 
 ## 本地测试
@@ -45,6 +51,6 @@ web: gunicorn hello:app --log-file - --access-logfile - --error-logfile -
 virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
-gunicorn hello:app
+gunicorn app:app
 ```
-* 访问 <http://localhost:8000> 查看效果。
+* 访问 <http://127.0.0.1:8000> 查看效果。
