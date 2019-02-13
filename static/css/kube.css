@@ -1042,11 +1042,9 @@ button:hover,
     border-color: rgba(28, 134, 242, 0.5); }
 
 .button.inverted {
-  color: #000;
-  background-color: #fff; }
+  color: #ccff67; }
   .button.inverted:hover {
-    color: #000;
-    background-color: white; }
+    color: #ccff67; }
   .button.inverted:disabled, .button.inverted.disabled {
     color: rgba(0, 0, 0, 0.7);
     background-color: rgba(255, 255, 255, 0.7); }
